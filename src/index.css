@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+::selection{
+     background: transparent;
+}
+body{
+    margin: 0;
+    background-color: #f9f9f8;
+    font-family: 'inter', sans-serif !important;
+}
