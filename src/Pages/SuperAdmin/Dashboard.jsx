@@ -1,12 +1,14 @@
 import {FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 function Dashboard() {
+  const navigate = useNavigate()
     return(
 <div className="h-screen flex flex-col ">
 
  
   <header className="sticky top-0 z-50 bg-white flex items-center justify-between px-4 py-4 border-b-2 border-[#eeeeee]">
-    
    
     <div className="cursor-pointer  material-symbols-outlined" style={{fontSize:"28px"}}>
       menu
@@ -19,7 +21,6 @@ function Dashboard() {
     </div>
 
     
-
   </header>
 
 
@@ -127,8 +128,8 @@ function Dashboard() {
   </button>
 
   
-  <button className="flex items-center gap-2 bg-black cursor-pointer text-white px-3 py-[6px] text-[13px] rounded-md hover:bg-gray-700 transition">
-    <span className="material-symbols-outlined" style={{ fontSize: "16px" }}>
+  <button className="flex items-center gap-2 bg-black cursor-pointer text-white px-3 py-[6px] text-[13px] rounded-md hover:bg-gray-700 transition" onClick={()=> navigate("/super-admin/institutions-mng")}>
+    <span className="material-symbols-outlined" style={{ fontSize: "16px" }} >
       add
     </span>
     New Institution
